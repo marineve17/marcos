@@ -5,7 +5,7 @@ import asyncio
 import os
 import random
 import re
-
+import asyncpraw
 
 TOKEN = str(os.environ['TOKEN'])
 
@@ -16,6 +16,34 @@ bot = commands.Bot(command_prefix="amanda ", intents = intents)
 
 # REGULAR EXPRESSIONS
 marcos_regex = re.compile(r"\bmarcos\b")
+#reddit settings
+reddit = asyncpraw.Reddit(client_id = "oZjbB_dKb_RUhw",
+                     client_secret = os.environ['secret'],
+                     username = "_marcos123",
+                     password = os.environ['password'],
+                     user_agent = "marcos")
+
+
+@bot.command()
+async def sapo(ctx):
+    subreddit = await reddit.subreddit("frog")
+    all_subs = []
+
+    top = subreddit.top("week", limit = 20)
+
+    async for submission in top:
+        all_subs.append(submission)
+
+    random_submission = random.choice(all_subs)
+
+    name = random_submission.title
+    url = random_submission.url
+
+    emb = discord.Embed(title = name)
+    emb.set_image(url = url)
+
+    await ctx.send(embed = emb)
+
 
 sapos = ["https://cdn.wallpapersafari.com/41/15/xZomb3.jpg", "http://2.bp.blogspot.com/-VirjBRtnyIU/TyfUR2dSi_I/AAAAAAAAB8E/8jDDSBmWs1E/s1600/Cute+Frog4.jpg",
          "https://shopzoki.com/wp-content/uploads/2019/09/IMG_5617.jpg", "https://shopzoki.com/wp-content/uploads/2019/09/DSC_1370.jpg", 
@@ -36,7 +64,7 @@ async def on_ready():
 
 
 @bot.command()
-async def sapo(ctx):
+async def frog(ctx):
     sapo = random.choice(sapos)
     await ctx.reply(sapo)
 
