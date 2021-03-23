@@ -16,6 +16,7 @@ bot = commands.Bot(command_prefix="amanda ", intents = intents)
 
 # REGULAR EXPRESSIONS
 marcos_regex = re.compile(r"\bmarcos\b")
+
 #reddit settings
 reddit = asyncpraw.Reddit(client_id = "oZjbB_dKb_RUhw",
                      client_secret = os.environ['secret'],
@@ -29,7 +30,7 @@ async def sapo(ctx):
     subreddit = await reddit.subreddit("frog")
     all_subs = []
 
-    top = subreddit.top("week", limit = 20)
+    top = subreddit.top("month", limit = 20)
 
     async for submission in top:
         all_subs.append(submission)
@@ -39,7 +40,7 @@ async def sapo(ctx):
     name = random_submission.title
     url = random_submission.url
 
-    emb = discord.Embed(title = name)
+    emb = discord.Embed(title = url)
     emb.set_image(url = url)
 
     await ctx.send(embed = emb)
