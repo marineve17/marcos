@@ -16,33 +16,12 @@ bot = commands.Bot(command_prefix="amanda ", intents = intents)
 
 # REGULAR EXPRESSIONS
 marcos_regex = re.compile(r"\bmarcos\b")
-#reddit settings
+#reddit config
 reddit = asyncpraw.Reddit(client_id = "oZjbB_dKb_RUhw",
                      client_secret = os.environ['secret'],
                      username = "_marcos123",
                      password = os.environ['password'],
                      user_agent = "marcos")
-
-
-@bot.command()
-async def sapo(ctx):
-    subreddit = await reddit.subreddit("frog")
-    all_subs = []
-
-    top = subreddit.top("week", limit = 20)
-
-    async for submission in top:
-        all_subs.append(submission)
-
-    random_submission = random.choice(all_subs)
-
-    name = random_submission.title
-    url = random_submission.url
-
-    emb = discord.Embed(title = name)
-    emb.set_image(url = url)
-
-    await ctx.send(embed = emb)
 
 
 sapos = ["https://cdn.wallpapersafari.com/41/15/xZomb3.jpg", "http://2.bp.blogspot.com/-VirjBRtnyIU/TyfUR2dSi_I/AAAAAAAAB8E/8jDDSBmWs1E/s1600/Cute+Frog4.jpg",
@@ -62,12 +41,34 @@ async def on_ready():
     print('Connected to bot: {}'.format(bot.user.name))
     print('Bot ID: {}'.format(bot.user.id))
 
+#gets reddit frog
+@bot.command()
+async def sapo(ctx):
+    subreddit = await reddit.subreddit("frog")
+    all_subs = []
 
+    top = subreddit.top("month", limit = 20)
+
+    async for submission in top:
+        all_subs.append(submission)
+
+    random_submission = random.choice(all_subs)
+
+    name = random_submission.title
+    url = random_submission.url
+
+    emb = discord.Embed(title = name)
+    emb.set_image(url = url)
+
+    await ctx.send(embed = emb)
+
+#send random frog image
 @bot.command()
 async def frog(ctx):
     sapo = random.choice(sapos)
     await ctx.reply(sapo)
 
+#send shawty
 @bot.command()
 async def shawty(ctx):
     await ctx.reply("https://www.youtube.com/watch?v=c6gV5J5C1Cg")
@@ -80,8 +81,6 @@ async def on_message(msg: discord.Message):
 
     if marcos_regex.search(m) is not None:
         await msg.reply("https://cdn.discordapp.com/attachments/796509327997403156/823914978397388831/badady.mp4")
-
-
 
 
 bot.run(TOKEN)
