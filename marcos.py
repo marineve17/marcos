@@ -4,6 +4,7 @@ from discord.ext.commands.core import command
 import asyncio
 import os
 import random
+import re
 
 
 TOKEN = str(os.environ['TOKEN'])
@@ -12,6 +13,9 @@ intents = discord.Intents.all()
 intents.members = True
 
 bot = commands.Bot(command_prefix="amanda ", intents = intents)
+
+# REGULAR EXPRESSIONS
+marcos_regex = re.compile(r"\bmarcos\b")
 
 sapos = ["https://cdn.wallpapersafari.com/41/15/xZomb3.jpg", "http://2.bp.blogspot.com/-VirjBRtnyIU/TyfUR2dSi_I/AAAAAAAAB8E/8jDDSBmWs1E/s1600/Cute+Frog4.jpg",
          "https://shopzoki.com/wp-content/uploads/2019/09/IMG_5617.jpg", "https://shopzoki.com/wp-content/uploads/2019/09/DSC_1370.jpg", 
@@ -46,7 +50,7 @@ async def on_message(msg: discord.Message):
     await bot.process_commands(msg) 
     m: str = msg.content.lower()
 
-    if "marcos" in m:
+    if marcos_regex.search(m) is not None:
         await msg.reply("https://cdn.discordapp.com/attachments/796509327997403156/823914978397388831/badady.mp4")
 
 
