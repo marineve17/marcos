@@ -36,6 +36,9 @@ async def sapo(ctx):
     sapo = random.choice(sapos)
     await ctx.reply(sapo)
 
+@bot.command()
+async def shawty(ctx):
+    await ctx.reply("https://www.youtube.com/watch?v=c6gV5J5C1Cg")
 
 #replies to marcos
 @bot.event
