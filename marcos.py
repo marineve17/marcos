@@ -10,13 +10,18 @@ from pretty_help import PrettyHelp
 
 TOKEN = str(os.environ['TOKEN'])
 
+#bot configs
 intents = discord.Intents.all()
 intents.members = True
+bot = commands.Bot(command_prefix="amanda ", intents = intents)
 
-bot = commands.Bot(command_prefix="amanda ", help_command=PrettyHelp(), intents = intents)
+#pretty help configs
+color = 0x179c34
+bot.help_command = PrettyHelp(color=color)
 
 # REGULAR EXPRESSIONS
 marcos_regex = re.compile(r"\bmarcos\b")
+
 #reddit config
 reddit = asyncpraw.Reddit(client_id = "oZjbB_dKb_RUhw",
                      client_secret = os.environ['secret'],
@@ -46,7 +51,7 @@ async def on_ready():
     print('Bot ID: {}'.format(bot.user.id))
 
 #send random frog image
-@bot.command()
+@bot.command(help = "🐸")
 async def sapinho(ctx):
     sapo = random.choice(sapos)
     await ctx.reply(sapo)
@@ -57,13 +62,13 @@ async def shawty(ctx):
     await ctx.reply("https://www.youtube.com/watch?v=c6gV5J5C1Cg")
 
 #send sexo gif
-@bot.command()
+@bot.command(help = "bonk, go to horny jail")
 async def sexo(ctx):
     sexo = random.choice(sexos)
     await ctx.reply(sexo)
 
 #replies with class link
-@bot.command()
+@bot.command(help = "link po lima")
 async def aulas(ctx):
     embed_aulas = discord.Embed()
     embed_aulas.title = "Aulas turma 3 MIEIC"
@@ -80,7 +85,7 @@ async def sapo(ctx):
     subreddit = await reddit.subreddit("frog")
     all_subs = []
 
-    top = subreddit.top("month", limit = 30)
+    top = subreddit.top("month", limit = 100)
 
     async for submission in top:
         all_subs.append(submission)
@@ -92,6 +97,7 @@ async def sapo(ctx):
 
     emb = discord.Embed(title = name)
     emb.set_image(url = url)
+    emb.add_field(name = "post: ", value = url)
 
     await ctx.send(embed = emb)
 
@@ -101,7 +107,7 @@ async def snek(ctx):
     subreddit = await reddit.subreddit("Sneks")
     all_subs = []
 
-    top = subreddit.top("month", limit = 30)
+    top = subreddit.top("month", limit = 100)
 
     async for submission in top:
         all_subs.append(submission)
@@ -113,6 +119,7 @@ async def snek(ctx):
 
     emb = discord.Embed(title = name)
     emb.set_image(url = url)
+    emb.add_field(name = "post: ", value = url)
 
     await ctx.send(embed = emb)
 
@@ -122,7 +129,7 @@ async def palpatine(ctx):
     subreddit = await reddit.subreddit("PrequelMemes")
     all_subs = []
 
-    top = subreddit.top("month", limit = 50)
+    top = subreddit.top("month", limit = 100)
 
     async for submission in top:
         all_subs.append(submission)
@@ -132,10 +139,11 @@ async def palpatine(ctx):
     name = random_submission.title
     url = random_submission.url
 
-    emb_sw = discord.Embed(title = name)
-    emb_sw.set_image(url = url)
+    emb = discord.Embed(title = name)
+    emb.set_image(url = url)
+    emb.add_field(name = "post: ", value = url)
 
-    await ctx.send(embed = emb_sw)
+    await ctx.send(embed = emb)
 
 #replies with tifu
 @bot.command(help = "well, someone fucked up")
@@ -143,7 +151,7 @@ async def tifu(ctx):
     subreddit = await reddit.subreddit("tifu")
     all_subs = []
 
-    top = subreddit.top("month", limit = 30)
+    top = subreddit.top("month", limit = 100)
 
     async for submission in top:
         all_subs.append(submission)
@@ -156,16 +164,17 @@ async def tifu(ctx):
 
     emb = discord.Embed(title = name)
     emb.description = text
+    emb.add_field(name = "post: ", value = url)
 
     await ctx.send(embed = emb)
 
 #replies with nerdices
-@bot.command(help = "sends relatable nerd shid")
+@bot.command(help = "sends relatable nerd shid (doesnt work btw)")
 async def src(ctx):
     subreddit = await reddit.subreddit("ProgrammerHumor")
     all_subs = []
 
-    top = subreddit.top("month", limit = 30)
+    top = subreddit.top("month", limit = 100)
 
     async for submission in top:
         all_subs.append(submission)
@@ -177,6 +186,7 @@ async def src(ctx):
 
     emb = discord.Embed(title = name)
     emb.set_image(url = url)
+    emb.add_field(name = "post: ", value = url)
 
     await ctx.send(embed = emb)
 
@@ -186,7 +196,7 @@ async def comuna(ctx):
     subreddit = await reddit.subreddit("CommunismMemes")
     all_subs = []
 
-    top = subreddit.top("month", limit = 30)
+    top = subreddit.top("month", limit = 100)
 
     async for submission in top:
         all_subs.append(submission)
@@ -198,6 +208,7 @@ async def comuna(ctx):
 
     emb = discord.Embed(title = name)
     emb.set_image(url = url)
+    emb.add_field(name = "post: ", value = url)
 
     await ctx.send(embed = emb)
 
