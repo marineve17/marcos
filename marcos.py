@@ -94,6 +94,27 @@ async def sapo(ctx):
 
     await ctx.send(embed = emb)
 
+#gets reddit danger noodle
+@bot.command()
+async def snek(ctx):
+    subreddit = await reddit.subreddit("Sneks")
+    all_subs = []
+
+    top = subreddit.top("month", limit = 30)
+
+    async for submission in top:
+        all_subs.append(submission)
+
+    random_submission = random.choice(all_subs)
+
+    name = random_submission.title
+    url = random_submission.url
+
+    emb = discord.Embed(title = name)
+    emb.set_image(url = url)
+
+    await ctx.send(embed = emb)
+
 #gets reddit star wars meme
 @bot.command()
 async def palpatine(ctx):
