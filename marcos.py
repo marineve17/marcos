@@ -97,8 +97,9 @@ async def sapo(ctx):
     url = random_submission.url
 
     emb = discord.Embed(title = name, timestamp=datetime.datetime.utcnow())
+    emb.color = 0xc4ffed
+    emb.add_field(name=name, value="![{}}]!({})".format(name, url))
     emb.set_image(url = url)
-    emb.set_footer(text = "Original post: {}".format(url))
 
     await ctx.send(embed = emb)
 
@@ -119,8 +120,9 @@ async def snek(ctx):
     url = random_submission.url
 
     emb = discord.Embed(title = name, timestamp=datetime.datetime.utcnow())
+    emb.color = 0xc4ffed
+    emb.add_field(name=name, value="![{}}]!({})".format(name, url))
     emb.set_image(url = url)
-    emb.set_footer(text = "Original post: {}".format(url))
 
     await ctx.send(embed = emb)
 
@@ -141,8 +143,9 @@ async def palpatine(ctx):
     url = random_submission.url
 
     emb = discord.Embed(title = name, timestamp=datetime.datetime.utcnow())
+    emb.color = 0xc4ffed
+    emb.add_field(name=name, value="![{}}]!({})".format(name, url))
     emb.set_image(url = url)
-    emb.set_footer(text = "Original post: {}".format(url))
 
     await ctx.send(embed = emb)
 
@@ -164,8 +167,9 @@ async def tifu(ctx):
     text = random_submission.selftext
 
     emb = discord.Embed(title = name, timestamp=datetime.datetime.utcnow())
+    emb.color = 0xc4ffed
+    emb.add_field(name=name, value="![{}}]!({})".format(name, url))
     emb.description = text
-    emb.set_footer(text = "Original post: {}".format(url))
 
     await ctx.send(embed = emb)
 
@@ -186,8 +190,9 @@ async def src(ctx):
     url = random_submission.url
 
     emb = discord.Embed(title = name, timestamp=datetime.datetime.utcnow())
+    emb.color = 0xc4ffed
+    emb.add_field(name=name, value="![{}}]!({})".format(name, url))
     emb.set_image(url = url)
-    emb.set_footer(text = "Original post: {}".format(url))
 
     await ctx.send(embed = emb)
 
@@ -208,8 +213,9 @@ async def comuna(ctx):
     url = random_submission.url
 
     emb = discord.Embed(title = name, timestamp=datetime.datetime.utcnow())
+    emb.color = 0xc4ffed
+    emb.add_field(name=name, value="![{}}]!({})".format(name, url))
     emb.set_image(url = url)
-    emb.set_footer(text = "Original post: {}".format(url))
 
     await ctx.send(embed = emb)
 
