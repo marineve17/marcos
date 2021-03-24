@@ -34,6 +34,9 @@ sapos = ["https://cdn.wallpapersafari.com/41/15/xZomb3.jpg", "http://2.bp.blogsp
          "https://i.pinimg.com/474x/7b/e5/ce/7be5ceb27a15b131cc8c276162b4ae17.jpg", "https://tenor.com/view/h%C3%A2m-frog-toad-frog-l%E1%BA%AFc-wiggle-gif-14557565",
          "https://tenor.com/view/frog-spinning-vinyl-animal-carnivorous-gif-17270183", "https://tenor.com/view/frog-gail-fail-let-me-have-it-gif-12024489"]
 
+sexos = ["https://tenor.com/view/horny-jail-bonk-dog-hit-head-stop-being-horny-gif-17298755", "https://media.discordapp.net/attachments/409313701888393218/715292714622517328/meme.gif",
+        "https://media.discordapp.net/attachments/635466696609759232/762026840457871390/caption.gif"]
+
 #changes discord presence
 @bot.event
 async def on_ready():
@@ -52,6 +55,11 @@ async def sapinho(ctx):
 async def shawty(ctx):
     await ctx.reply("https://www.youtube.com/watch?v=c6gV5J5C1Cg")
 
+#send sexo gif
+@bot.command()
+async def sexo(ctx):
+    sexo = random.choice(sexos)
+    await ctx.reply(sexo)
 
 #gets reddit frog
 @bot.command()
