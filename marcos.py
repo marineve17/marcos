@@ -62,6 +62,7 @@ async def sexo(ctx):
     await ctx.reply(sexo)
 
 #replies with class link
+@bot.command()
 async def aulas(ctx):
     embed_aulas = discord.Embed()
     embed_aulas.title = "Aulas turma 3 MIEIC"
