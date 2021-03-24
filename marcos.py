@@ -98,7 +98,7 @@ async def sapo(ctx):
 
     emb = discord.Embed(title = name, timestamp=datetime.datetime.utcnow())
     emb.set_image(url = url)
-    emb.set_footer(text = "Original post:", icon_url=url)
+    emb.set_footer(text = "Original post: {}".format(url))
 
     await ctx.send(embed = emb)
 
@@ -120,7 +120,7 @@ async def snek(ctx):
 
     emb = discord.Embed(title = name, timestamp=datetime.datetime.utcnow())
     emb.set_image(url = url)
-    emb.set_footer(text = "Original post:", icon_url=url)
+    emb.set_footer(text = "Original post: {}".format(url))
 
     await ctx.send(embed = emb)
 
@@ -142,7 +142,7 @@ async def palpatine(ctx):
 
     emb = discord.Embed(title = name, timestamp=datetime.datetime.utcnow())
     emb.set_image(url = url)
-    emb.set_footer(text = "Original post:", icon_url=url)
+    emb.set_footer(text = "Original post: {}".format(url))
 
     await ctx.send(embed = emb)
 
@@ -165,7 +165,7 @@ async def tifu(ctx):
 
     emb = discord.Embed(title = name, timestamp=datetime.datetime.utcnow())
     emb.description = text
-    emb.set_footer(text = "Original post:", icon_url=url)
+    emb.set_footer(text = "Original post: {}".format(url))
 
     await ctx.send(embed = emb)
 
@@ -187,7 +187,7 @@ async def src(ctx):
 
     emb = discord.Embed(title = name, timestamp=datetime.datetime.utcnow())
     emb.set_image(url = url)
-    emb.set_footer(text = "Original post:", icon_url=url)
+    emb.set_footer(text = "Original post: {}".format(url))
 
     await ctx.send(embed = emb)
 
@@ -209,7 +209,7 @@ async def comuna(ctx):
 
     emb = discord.Embed(title = name, timestamp=datetime.datetime.utcnow())
     emb.set_image(url = url)
-    emb.set_footer(text = "Original post:", icon_url=url)
+    emb.set_footer(text = "Original post: {}".format(url))
 
     await ctx.send(embed = emb)
 
