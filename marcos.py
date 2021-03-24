@@ -61,6 +61,17 @@ async def sexo(ctx):
     sexo = random.choice(sexos)
     await ctx.reply(sexo)
 
+#replies with class link
+async def aulas(ctx):
+    embed_aulas = discord.Embed()
+    embed_aulas.title = "Aulas turma 3 MIEIC"
+    embed_aulas.description = '''\n[FISI](https://us02web.zoom.us/j/5187730519?pwd=VUpVUGFjVVZXeE1PakFKSHBIa2IwZz09)
+        [CMAT](https://videoconf-colibri.zoom.us/j/89216289853)
+        [MPCP](https://videoconf-colibri.zoom.us/j/84523046353?pwd=bTNVemVqQk1YQ0lTcDVTMEtiUDNKUT09)
+        [MEST](https://videoconf-colibri.zoom.us/j/85894404142?pwd=N09zK29OaVFoWVZEaVRPMXZuYnQwZz09)'''
+
+    await ctx.send(embed = embed_aulas)
+
 #gets reddit frog
 @bot.command()
 async def sapo(ctx):
