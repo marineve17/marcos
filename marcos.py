@@ -7,6 +7,7 @@ import random
 import re
 import asyncpraw
 from pretty_help import PrettyHelp
+import datetime
 
 TOKEN = str(os.environ['TOKEN'])
 
@@ -95,9 +96,9 @@ async def sapo(ctx):
     name = random_submission.title
     url = random_submission.url
 
-    emb = discord.Embed(title = name)
+    emb = discord.Embed(title = name, timestamp=datetime.datetime.utcnow())
     emb.set_image(url = url)
-    emb.add_field(name = "post: ", value = url)
+    emb.set_footer(text = "Original post:", icon_url=url)
 
     await ctx.send(embed = emb)
 
@@ -117,9 +118,9 @@ async def snek(ctx):
     name = random_submission.title
     url = random_submission.url
 
-    emb = discord.Embed(title = name)
+    emb = discord.Embed(title = name, timestamp=datetime.datetime.utcnow())
     emb.set_image(url = url)
-    emb.add_field(name = "post: ", value = url)
+    emb.set_footer(text = "Original post:", icon_url=url)
 
     await ctx.send(embed = emb)
 
@@ -139,9 +140,9 @@ async def palpatine(ctx):
     name = random_submission.title
     url = random_submission.url
 
-    emb = discord.Embed(title = name)
+    emb = discord.Embed(title = name, timestamp=datetime.datetime.utcnow())
     emb.set_image(url = url)
-    emb.add_field(name = "post: ", value = url)
+    emb.set_footer(text = "Original post:", icon_url=url)
 
     await ctx.send(embed = emb)
 
@@ -162,9 +163,9 @@ async def tifu(ctx):
     url = random_submission.url
     text = random_submission.selftext
 
-    emb = discord.Embed(title = name)
+    emb = discord.Embed(title = name, timestamp=datetime.datetime.utcnow())
     emb.description = text
-    emb.add_field(name = "post: ", value = url)
+    emb.set_footer(text = "Original post:", icon_url=url)
 
     await ctx.send(embed = emb)
 
@@ -184,9 +185,9 @@ async def src(ctx):
     name = random_submission.title
     url = random_submission.url
 
-    emb = discord.Embed(title = name)
+    emb = discord.Embed(title = name, timestamp=datetime.datetime.utcnow())
     emb.set_image(url = url)
-    emb.add_field(name = "post: ", value = url)
+    emb.set_footer(text = "Original post:", icon_url=url)
 
     await ctx.send(embed = emb)
 
@@ -206,9 +207,9 @@ async def comuna(ctx):
     name = random_submission.title
     url = random_submission.url
 
-    emb = discord.Embed(title = name)
+    emb = discord.Embed(title = name, timestamp=datetime.datetime.utcnow())
     emb.set_image(url = url)
-    emb.add_field(name = "post: ", value = url)
+    emb.set_footer(text = "Original post:", icon_url=url)
 
     await ctx.send(embed = emb)
 
