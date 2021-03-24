@@ -98,7 +98,7 @@ async def sapo(ctx):
 
     emb = discord.Embed(title = name, timestamp=datetime.datetime.utcnow())
     emb.set_image(url = url)
-    emb.set_footer(text = "Original post: {}".format(url))
+    emb.color = 0xc4ffed
 
     await ctx.send(embed = emb)
 
@@ -120,7 +120,7 @@ async def snek(ctx):
 
     emb = discord.Embed(title = name, timestamp=datetime.datetime.utcnow())
     emb.set_image(url = url)
-    emb.set_footer(text = "Original post: {}".format(url))
+    emb.color = 0xc4ffed
 
     await ctx.send(embed = emb)
 
@@ -142,30 +142,7 @@ async def palpatine(ctx):
 
     emb = discord.Embed(title = name, timestamp=datetime.datetime.utcnow())
     emb.set_image(url = url)
-    emb.set_footer(text = "Original post: {}".format(url))
-
-    await ctx.send(embed = emb)
-
-#replies with tifu
-@bot.command(help = "well, someone fucked up")
-async def tifu(ctx):
-    subreddit = await reddit.subreddit("tifu")
-    all_subs = []
-
-    top = subreddit.top("month", limit = 100)
-
-    async for submission in top:
-        all_subs.append(submission)
-
-    random_submission = random.choice(all_subs)
-
-    name = random_submission.title
-    url = random_submission.url
-    text = random_submission.selftext
-
-    emb = discord.Embed(title = name, timestamp=datetime.datetime.utcnow())
-    emb.description = text
-    emb.set_footer(text = "Original post: {}".format(url))
+    emb.color = 0xc4ffed
 
     await ctx.send(embed = emb)
 
@@ -187,7 +164,7 @@ async def src(ctx):
 
     emb = discord.Embed(title = name, timestamp=datetime.datetime.utcnow())
     emb.set_image(url = url)
-    emb.set_footer(text = "Original post: {}".format(url))
+    emb.color = 0xc4ffed
 
     await ctx.send(embed = emb)
 
@@ -209,7 +186,7 @@ async def comuna(ctx):
 
     emb = discord.Embed(title = name, timestamp=datetime.datetime.utcnow())
     emb.set_image(url = url)
-    emb.set_footer(text = "Original post: {}".format(url))
+    emb.color = 0xc4ffed
 
     await ctx.send(embed = emb)
 
