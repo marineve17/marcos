@@ -41,13 +41,25 @@ async def on_ready():
     print('Connected to bot: {}'.format(bot.user.name))
     print('Bot ID: {}'.format(bot.user.id))
 
+#send random frog image
+@bot.command()
+async def sapinho(ctx):
+    sapo = random.choice(sapos)
+    await ctx.reply(sapo)
+
+#send shawty
+@bot.command()
+async def shawty(ctx):
+    await ctx.reply("https://www.youtube.com/watch?v=c6gV5J5C1Cg")
+
+
 #gets reddit frog
 @bot.command()
 async def sapo(ctx):
     subreddit = await reddit.subreddit("frog")
     all_subs = []
 
-    top = subreddit.top("month", limit = 20)
+    top = subreddit.top("month", limit = 30)
 
     async for submission in top:
         all_subs.append(submission)
@@ -61,18 +73,6 @@ async def sapo(ctx):
     emb.set_image(url = url)
 
     await ctx.send(embed = emb)
-
-#send random frog image
-@bot.command()
-async def sapinho(ctx):
-    sapo = random.choice(sapos)
-    await ctx.reply(sapo)
-
-#send shawty
-@bot.command()
-async def shawty(ctx):
-    await ctx.reply("https://www.youtube.com/watch?v=c6gV5J5C1Cg")
-
 
 #gets reddit star wars meme
 @bot.command()
@@ -101,7 +101,7 @@ async def tifu(ctx):
     subreddit = await reddit.subreddit("tifu")
     all_subs = []
 
-    top = subreddit.top("month", limit = 20)
+    top = subreddit.top("month", limit = 30)
 
     async for submission in top:
         all_subs.append(submission)
@@ -114,6 +114,48 @@ async def tifu(ctx):
 
     emb = discord.Embed(title = name)
     emb.description = text
+
+    await ctx.send(embed = emb)
+
+#replies with nerdices
+@bot.command()
+async def src(ctx):
+    subreddit = await reddit.subreddit("ProgrammerHumor")
+    all_subs = []
+
+    top = subreddit.top("month", limit = 30)
+
+    async for submission in top:
+        all_subs.append(submission)
+
+    random_submission = random.choice(all_subs)
+
+    name = random_submission.title
+    url = random_submission.url
+
+    emb = discord.Embed(title = name)
+    emb.set_image(url = url)
+
+    await ctx.send(embed = emb)
+
+#replies with nerdices
+@bot.command()
+async def comuna(ctx):
+    subreddit = await reddit.subreddit("CommunismMemes")
+    all_subs = []
+
+    top = subreddit.top("month", limit = 30)
+
+    async for submission in top:
+        all_subs.append(submission)
+
+    random_submission = random.choice(all_subs)
+
+    name = random_submission.title
+    url = random_submission.url
+
+    emb = discord.Embed(title = name)
+    emb.set_image(url = url)
 
     await ctx.send(embed = emb)
 
