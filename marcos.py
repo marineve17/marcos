@@ -98,7 +98,6 @@ async def sapo(ctx):
 
     emb = discord.Embed(title = name, timestamp=datetime.datetime.utcnow())
     emb.color = 0xc4ffed
-    emb.add_field(name=name, value="![{}}]!({})".format(name, url))
     emb.set_image(url = url)
 
     await ctx.send(embed = emb)
@@ -121,7 +120,6 @@ async def snek(ctx):
 
     emb = discord.Embed(title = name, timestamp=datetime.datetime.utcnow())
     emb.color = 0xc4ffed
-    emb.add_field(name=name, value="![{}}]!({})".format(name, url))
     emb.set_image(url = url)
 
     await ctx.send(embed = emb)
@@ -144,7 +142,6 @@ async def palpatine(ctx):
 
     emb = discord.Embed(title = name, timestamp=datetime.datetime.utcnow())
     emb.color = 0xc4ffed
-    emb.add_field(name=name, value="![{}}]!({})".format(name, url))
     emb.set_image(url = url)
 
     await ctx.send(embed = emb)
@@ -168,7 +165,6 @@ async def tifu(ctx):
 
     emb = discord.Embed(title = name, timestamp=datetime.datetime.utcnow())
     emb.color = 0xc4ffed
-    emb.add_field(name=name, value="![{}}]!({})".format(name, url))
     emb.description = text
 
     await ctx.send(embed = emb)
@@ -191,7 +187,6 @@ async def src(ctx):
 
     emb = discord.Embed(title = name, timestamp=datetime.datetime.utcnow())
     emb.color = 0xc4ffed
-    emb.add_field(name=name, value="![{}}]!({})".format(name, url))
     emb.set_image(url = url)
 
     await ctx.send(embed = emb)
@@ -214,7 +209,6 @@ async def comuna(ctx):
 
     emb = discord.Embed(title = name, timestamp=datetime.datetime.utcnow())
     emb.color = 0xc4ffed
-    emb.add_field(name=name, value="![{}}]!({})".format(name, url))
     emb.set_image(url = url)
 
     await ctx.send(embed = emb)
