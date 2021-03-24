@@ -6,13 +6,14 @@ import os
 import random
 import re
 import asyncpraw
+from pretty_help import PrettyHelp
 
 TOKEN = str(os.environ['TOKEN'])
 
 intents = discord.Intents.all()
 intents.members = True
 
-bot = commands.Bot(command_prefix="amanda ", intents = intents)
+bot = commands.Bot(command_prefix="amanda ", help_command=PrettyHelp(), intents = intents)
 
 # REGULAR EXPRESSIONS
 marcos_regex = re.compile(r"\bmarcos\b")

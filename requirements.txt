@@ -1,2 +1,3 @@
 discord.py
 asyncpraw
+discord-pretty-help==1.1.2
