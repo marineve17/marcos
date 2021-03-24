@@ -80,7 +80,7 @@ async def palpatine(ctx):
     subreddit = await reddit.subreddit("PrequelMemes")
     all_subs = []
 
-    top = subreddit.top("month", limit = 20)
+    top = subreddit.top("month", limit = 50)
 
     async for submission in top:
         all_subs.append(submission)
@@ -94,6 +94,28 @@ async def palpatine(ctx):
     emb_sw.set_image(url = url)
 
     await ctx.send(embed = emb_sw)
+
+#replies with tifu
+@bot.command()
+async def tifu(ctx):
+    subreddit = await reddit.subreddit("tifu")
+    all_subs = []
+
+    top = subreddit.top("month", limit = 20)
+
+    async for submission in top:
+        all_subs.append(submission)
+
+    random_submission = random.choice(all_subs)
+
+    name = random_submission.title
+    url = random_submission.url
+    text = random_submission.selftext
+
+    emb = discord.Embed(title = name)
+    emb.description = text
+
+    await ctx.send(embed = emb)
 
 #replies to marcos
 @bot.event
