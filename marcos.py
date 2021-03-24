@@ -75,7 +75,7 @@ async def aulas(ctx):
     await ctx.send(embed = embed_aulas)
 
 #gets reddit frog
-@bot.command()
+@bot.command(help = "sends top forggo on reddit !")
 async def sapo(ctx):
     subreddit = await reddit.subreddit("frog")
     all_subs = []
@@ -96,7 +96,7 @@ async def sapo(ctx):
     await ctx.send(embed = emb)
 
 #gets reddit danger noodle
-@bot.command()
+@bot.command(help = "sends top danger noodles on reddit !")
 async def snek(ctx):
     subreddit = await reddit.subreddit("Sneks")
     all_subs = []
@@ -117,7 +117,7 @@ async def snek(ctx):
     await ctx.send(embed = emb)
 
 #gets reddit star wars meme
-@bot.command()
+@bot.command(help = "sends poggers prequel meme")
 async def palpatine(ctx):
     subreddit = await reddit.subreddit("PrequelMemes")
     all_subs = []
@@ -138,7 +138,7 @@ async def palpatine(ctx):
     await ctx.send(embed = emb_sw)
 
 #replies with tifu
-@bot.command()
+@bot.command(help = "well, someone fucked up")
 async def tifu(ctx):
     subreddit = await reddit.subreddit("tifu")
     all_subs = []
@@ -160,7 +160,7 @@ async def tifu(ctx):
     await ctx.send(embed = emb)
 
 #replies with nerdices
-@bot.command()
+@bot.command(help = "sends relatable nerd shid")
 async def src(ctx):
     subreddit = await reddit.subreddit("ProgrammerHumor")
     all_subs = []
@@ -181,7 +181,7 @@ async def src(ctx):
     await ctx.send(embed = emb)
 
 #replies with nerdices
-@bot.command()
+@bot.command(help = "communism")
 async def comuna(ctx):
     subreddit = await reddit.subreddit("CommunismMemes")
     all_subs = []
