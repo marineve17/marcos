@@ -91,7 +91,7 @@ async def sapo(ctx):
     top = subreddit.top("month", limit = 100)
 
     async for submission in top:
-        if ("i.redd.it" in submission.url) and (submission.title < 256):
+        if ("i.redd.it" in submission.url) and (len(submission.title) < 256):
             all_subs.append(submission)
 
     random_submission = random.choice(all_subs)
@@ -114,7 +114,7 @@ async def snek(ctx):
     top = subreddit.top("month", limit = 70)
 
     async for submission in top:
-        if ("i.redd.it" in submission.url) and (submission.title < 256):
+        if ("i.redd.it" in submission.url) and (len(submission.title) < 256):
             all_subs.append(submission)
 
     random_submission = random.choice(all_subs)
@@ -137,7 +137,7 @@ async def palpatine(ctx):
     top = subreddit.top("month", limit = 70)
 
     async for submission in top:
-        if ("i.redd.it" in submission.url) and (submission.title < 256):
+        if ("i.redd.it" in submission.url) and (len(submission.title) < 256):
             all_subs.append(submission)
 
     random_submission = random.choice(all_subs)
@@ -160,7 +160,7 @@ async def kanye(ctx):
     top = subreddit.top("month", limit = 50)
 
     async for submission in top:
-        if ("i.redd.it" in submission.url) and (submission.title < 256):
+        if ("i.redd.it" in submission.url) and (len(submission.title) < 256):
             all_subs.append(submission)
 
     random_submission = random.choice(all_subs)
@@ -183,7 +183,7 @@ async def src(ctx):
     top = subreddit.top("month", limit = 70)
 
     async for submission in top:
-        if ("i.redd.it" in submission.url) and (submission.title < 256):
+        if ("i.redd.it" in submission.url) and (len(submission.title) < 256):
             all_subs.append(submission)
 
     random_submission = random.choice(all_subs)
@@ -206,7 +206,7 @@ async def comuna(ctx):
     top = subreddit.top("month", limit = 50)
 
     async for submission in top:
-        if ("i.redd.it" in submission.url) and (submission.title < 256):
+        if ("i.redd.it" in submission.url) and (len(submission.title) < 256):
             all_subs.append(submission)
 
     random_submission = random.choice(all_subs)
@@ -228,7 +228,7 @@ async def weeb(ctx):
     top = subreddit.top("month", limit = 70)
 
     async for submission in top:
-        if ("i.redd.it" in submission.url) and (submission.title < 256):
+        if ("i.redd.it" in submission.url) and (len(submission.title) < 256):
             all_subs.append(submission)
 
     random_submission = random.choice(all_subs)
