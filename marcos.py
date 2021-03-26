@@ -91,7 +91,8 @@ async def sapo(ctx):
     top = subreddit.top("month", limit = 100)
 
     async for submission in top:
-        all_subs.append(submission)
+        if ("i.redd.it" in submission):
+            all_subs.append(submission)
 
     random_submission = random.choice(all_subs)
 
@@ -113,7 +114,8 @@ async def snek(ctx):
     top = subreddit.top("month", limit = 70)
 
     async for submission in top:
-        all_subs.append(submission)
+        if ("i.redd.it" in submission):
+            all_subs.append(submission)
 
     random_submission = random.choice(all_subs)
 
@@ -135,7 +137,8 @@ async def palpatine(ctx):
     top = subreddit.top("month", limit = 70)
 
     async for submission in top:
-        all_subs.append(submission)
+        if ("i.redd.it" in submission):
+            all_subs.append(submission)
 
     random_submission = random.choice(all_subs)
 
@@ -157,7 +160,8 @@ async def kanye(ctx):
     top = subreddit.top("month", limit = 50)
 
     async for submission in top:
-        all_subs.append(submission)
+        if ("i.redd.it" in submission):
+            all_subs.append(submission)
 
     random_submission = random.choice(all_subs)
 
@@ -179,7 +183,8 @@ async def src(ctx):
     top = subreddit.top("month", limit = 70)
 
     async for submission in top:
-        all_subs.append(submission)
+        if ("i.redd.it" in submission):
+            all_subs.append(submission)
 
     random_submission = random.choice(all_subs)
 
@@ -201,7 +206,8 @@ async def comuna(ctx):
     top = subreddit.top("month", limit = 50)
 
     async for submission in top:
-        all_subs.append(submission)
+        if ("i.redd.it" in submission):
+            all_subs.append(submission)
 
     random_submission = random.choice(all_subs)
 
@@ -211,6 +217,28 @@ async def comuna(ctx):
     emb = discord.Embed(title = name, timestamp=datetime.datetime.utcnow())
     emb.set_image(url = url)
     emb.color = 0xff0015
+    await ctx.reply(embed = emb)
+
+#replies with epicc anime meme
+@bot.command(help = "epicc anime")
+async def weeb(ctx):
+    subreddit = await reddit.subreddit("animememes")
+    all_subs = []
+
+    top = subreddit.top("month", limit = 70)
+
+    async for submission in top:
+        if ("i.redd.it" in submission):
+            all_subs.append(submission)
+
+    random_submission = random.choice(all_subs)
+
+    name = random_submission.title
+    url = random_submission.url
+
+    emb = discord.Embed(title = name, timestamp=datetime.datetime.utcnow())
+    emb.set_image(url = url)
+    emb.color = 0xbdfffd
     await ctx.reply(embed = emb)
 
 #replies to marcos
