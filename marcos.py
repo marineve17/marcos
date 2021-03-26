@@ -101,6 +101,7 @@ async def sapo(ctx):
     emb = discord.Embed(title = name, timestamp=datetime.datetime.utcnow())
     emb.set_image(url = url)
     emb.color = 0xc4ffed
+    print(url)
 
     await ctx.reply(embed = emb)
 
@@ -123,6 +124,7 @@ async def snek(ctx):
     emb = discord.Embed(title = name, timestamp=datetime.datetime.utcnow())
     emb.set_image(url = url)
     emb.color = 0xc4ffed
+    print(url)
 
     await ctx.reply(embed = emb)
 
