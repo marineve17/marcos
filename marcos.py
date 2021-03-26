@@ -44,6 +44,26 @@ sapos = ["https://cdn.wallpapersafari.com/41/15/xZomb3.jpg", "http://2.bp.blogsp
 sexos = ["https://tenor.com/view/horny-jail-bonk-dog-hit-head-stop-being-horny-gif-17298755", "https://media.discordapp.net/attachments/409313701888393218/715292714622517328/meme.gif",
         "https://media.discordapp.net/attachments/635466696609759232/762026840457871390/caption.gif"]
 
+def redditpost(subreddit, lim, cor):
+    all_subs = []
+
+    top = subreddit.top("month", limit = lim)
+
+    async for submission in top:
+        if ("i.redd.it" in submission.url) and (len(submission.title) < 256):
+            all_subs.append(submission)
+
+    random_submission = random.choice(all_subs)
+
+    name = random_submission.title
+    url = random_submission.url
+
+    emb = discord.Embed(title = name, timestamp=datetime.datetime.utcnow())
+    emb.set_image(url = url)
+    emb.color = cor
+
+    return emb
+
 #changes discord presence
 @bot.event
 async def on_ready():
@@ -54,13 +74,11 @@ async def on_ready():
 #send random frog image
 @bot.command(help = "🐸")
 async def sapinho(ctx):
-    emb = discord.Embed(
-        url = random.choice(sapos)
-    )
-    await ctx.reply(emb)
+    sapo = random.choice(sapos)
+    await ctx.reply(sapo)
 
 #send shawty
-@bot.command()
+@bot.command(help = "na na na na everyday")
 async def shawty(ctx):
     await ctx.reply("https://www.youtube.com/watch?v=c6gV5J5C1Cg")
 
@@ -86,24 +104,8 @@ async def aulas(ctx):
 @bot.command(help = "sends top forggo on reddit !")
 async def sapo(ctx):
     subreddit = await reddit.subreddit("frog")
-    all_subs = []
 
-    top = subreddit.top("month", limit = 100)
-
-    async for submission in top:
-        if ("i.redd.it" in submission.url) and (len(submission.title) < 256):
-            all_subs.append(submission)
-
-    random_submission = random.choice(all_subs)
-
-    name = random_submission.title
-    url = random_submission.url
-
-    emb = discord.Embed(title = name, timestamp=datetime.datetime.utcnow())
-    emb.set_image(url = url)
-    emb.color = 0xc4ffed
-
-    await ctx.reply(embed = emb)
+    await ctx.reply(embed = redditpost(subreddit, lim = 100, cor = 0xc4ffed))
 
 #gets reddit danger noodle
 @bot.command(help = "sends top danger noodles on reddit !")
@@ -248,7 +250,8 @@ async def on_message(msg: discord.Message):
     m: str = msg.content.lower()
 
     if marcos_regex.search(m) is not None:
-        await msg.reply("https://cdn.discordapp.com/attachments/796509327997403156/823914978397388831/badady.mp4")
+        emb = discord.Embed(url = "https://cdn.discordapp.com/attachments/796509327997403156/823914978397388831/badady.mp4")
+        await msg.reply(emb)
 
 
 bot.run(TOKEN)
