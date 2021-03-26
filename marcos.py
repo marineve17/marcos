@@ -54,8 +54,10 @@ async def on_ready():
 #send random frog image
 @bot.command(help = "🐸")
 async def sapinho(ctx):
-    sapo = random.choice(sapos)
-    await ctx.reply(sapo)
+    emb = discord.Embed(
+        url = random.choice(sapos)
+    )
+    await ctx.reply(emb)
 
 #send shawty
 @bot.command()
@@ -78,7 +80,7 @@ async def aulas(ctx):
         [MPCP](https://videoconf-colibri.zoom.us/j/84523046353?pwd=bTNVemVqQk1YQ0lTcDVTMEtiUDNKUT09)
         [MEST](https://videoconf-colibri.zoom.us/j/85894404142?pwd=N09zK29OaVFoWVZEaVRPMXZuYnQwZz09)'''
 
-    await ctx.send(embed = embed_aulas)
+    await ctx.reply(embed = embed_aulas)
 
 #gets reddit frog
 @bot.command(help = "sends top forggo on reddit !")
@@ -100,7 +102,7 @@ async def sapo(ctx):
     emb.set_image(url = url)
     emb.color = 0xc4ffed
 
-    await ctx.send(embed = emb)
+    await ctx.reply(embed = emb)
 
 #gets reddit danger noodle
 @bot.command(help = "sends top danger noodles on reddit !")
@@ -108,7 +110,7 @@ async def snek(ctx):
     subreddit = await reddit.subreddit("Sneks")
     all_subs = []
 
-    top = subreddit.top("month", limit = 100)
+    top = subreddit.top("month", limit = 70)
 
     async for submission in top:
         all_subs.append(submission)
@@ -122,7 +124,7 @@ async def snek(ctx):
     emb.set_image(url = url)
     emb.color = 0xc4ffed
 
-    await ctx.send(embed = emb)
+    await ctx.reply(embed = emb)
 
 #gets reddit star wars meme
 @bot.command(help = "sends poggers prequel meme")
@@ -130,7 +132,7 @@ async def palpatine(ctx):
     subreddit = await reddit.subreddit("PrequelMemes")
     all_subs = []
 
-    top = subreddit.top("month", limit = 100)
+    top = subreddit.top("month", limit = 70)
 
     async for submission in top:
         all_subs.append(submission)
@@ -144,15 +146,37 @@ async def palpatine(ctx):
     emb.set_image(url = url)
     emb.color = 0xc4ffed
 
-    await ctx.send(embed = emb)
+    await ctx.reply(embed = emb)
+
+#gets super awesome kanye meme
+@bot.command(help = "kayne")
+async def kanye(ctx):
+    subreddit = await reddit.subreddit("WestSubEver")
+    all_subs = []
+
+    top = subreddit.top("month", limit = 50)
+
+    async for submission in top:
+        all_subs.append(submission)
+
+    random_submission = random.choice(all_subs)
+
+    name = random_submission.title
+    url = random_submission.url
+
+    emb = discord.Embed(title = name, timestamp=datetime.datetime.utcnow())
+    emb.set_image(url = url)
+    emb.color = 0xe6c655
+
+    await ctx.reply(embed = emb)
 
 #replies with nerdices
-@bot.command(help = "sends relatable nerd shid (doesnt work btw)")
+@bot.command(help = "sends relatable nerd shid")
 async def src(ctx):
     subreddit = await reddit.subreddit("ProgrammerHumor")
     all_subs = []
 
-    top = subreddit.top("month", limit = 100)
+    top = subreddit.top("month", limit = 70)
 
     async for submission in top:
         all_subs.append(submission)
@@ -166,7 +190,7 @@ async def src(ctx):
     emb.set_image(url = url)
     emb.color = 0xc4ffed
 
-    await ctx.send(embed = emb)
+    await ctx.reply(embed = emb)
 
 #replies with nerdices
 @bot.command(help = "communism")
@@ -174,7 +198,7 @@ async def comuna(ctx):
     subreddit = await reddit.subreddit("CommunismMemes")
     all_subs = []
 
-    top = subreddit.top("month", limit = 100)
+    top = subreddit.top("month", limit = 50)
 
     async for submission in top:
         all_subs.append(submission)
@@ -186,9 +210,8 @@ async def comuna(ctx):
 
     emb = discord.Embed(title = name, timestamp=datetime.datetime.utcnow())
     emb.set_image(url = url)
-    emb.color = 0xc4ffed
-
-    await ctx.send(embed = emb)
+    emb.color = 0xff0015
+    await ctx.reply(embed = emb)
 
 #replies to marcos
 @bot.event
