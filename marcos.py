@@ -264,10 +264,13 @@ async def on_message(msg: discord.Message):
     m: str = msg.content.lower()
 
     if marcos_regex.search(m) is not None:
-        #emb = discord.Embed(url = "https://cdn.discordapp.com/attachments/796509327997403156/823914978397388831/badady.mp4")
-        #await msg.reply(emb)
+        emb = discord.Embed(url = "https://cdn.discordapp.com/attachments/796509327997403156/823914978397388831/badady.mp4")
+
         print(msg.author)
-        await msg.reply("https://cdn.discordapp.com/attachments/796509327997403156/823914978397388831/badady.mp4")
+        if ("footvaalvica" in str(msg.author)):
+            await msg.reply(emb)
+        else:
+            await msg.reply("https://cdn.discordapp.com/attachments/796509327997403156/823914978397388831/badady.mp4")
 
 
 bot.run(TOKEN)
