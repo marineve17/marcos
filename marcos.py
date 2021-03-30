@@ -81,7 +81,7 @@ async def aulas(ctx):
     [MEST](https://videoconf-colibri.zoom.us/j/83335195718?pwd=QW1mTisxZkdFOVM4Y1lHSDRoUU84UT09) \n(qua 11:00-13:00)
 
     -- TURMA 3 --   
-    [FISI](https://videoconf-colibri.zoom.us/j/82303035851?pwd=RWFiR3M4WExuU2tubitsaGRzZjJvUT09)
+    [FISI](https://us02web.zoom.us/j/5187730519?pwd=VUpVUGFjVVZXeE1PakFKSHBIa2IwZz09)
     [CMAT](https://videoconf-colibri.zoom.us/j/89216289853)
     [MPCP](https://videoconf-colibri.zoom.us/j/84523046353?pwd=bTNVemVqQk1YQ0lTcDVTMEtiUDNKUT09)
     [MEST](https://videoconf-colibri.zoom.us/j/85894404142?pwd=N09zK29OaVFoWVZEaVRPMXZuYnQwZz09)'''
