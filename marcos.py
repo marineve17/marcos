@@ -30,6 +30,15 @@ reddit = asyncpraw.Reddit(client_id = "oZjbB_dKb_RUhw",
                      password = os.environ['password'],
                      user_agent = "marcos")
 
+alternas = ["https://i.pinimg.com/564x/d2/ed/a1/d2eda1b3036aa94ded3381b3495b79d3.jpg", "https://i.pinimg.com/564x/cb/a8/86/cba8867e6df8f06582d5f8b41527e145.jpg",
+            "https://i.pinimg.com/564x/92/9e/1e/929e1eeba07ce47f27f4448635ec9e29.jpg", "https://i.pinimg.com/564x/a1/0c/87/a10c877037b4296fa6c783dd983c62db.jpg",
+            "https://i.pinimg.com/564x/82/01/09/820109f708a5a5657a5b4a088a71315c.jpg", "https://cdn.discordapp.com/attachments/759882556744663040/824573836468158484/booba.png",
+            "https://i.pinimg.com/564x/44/63/0b/44630b852978a3102c543acf4b3d79cd.jpg", "https://i.pinimg.com/564x/c6/87/43/c68743aadb118de38ac690e8bdd3d2a0.jpg",
+            "https://i.pinimg.com/564x/d9/e2/b0/d9e2b09a7c22658d77ce454dc93ea6a6.jpg", "https://i.pinimg.com/564x/61/e9/b9/61e9b9889cfd16f894604b672c51f432.jpg",
+            "https://i.pinimg.com/564x/f4/6b/51/f46b517b5c31090fd1ac6c025fea3e63.jpg", "https://i.pinimg.com/564x/fc/59/ab/fc59ab3cc05dc204980a16d6e0b56750.jpg",
+            "https://i.pinimg.com/564x/3e/9b/68/3e9b681c43b59c116fd8b4e20f114c5c.jpg", "https://i.pinimg.com/564x/5b/6f/9a/5b6f9ac06ca76ecbd507a9552cbe5cff.jpg",
+            "https://i.pinimg.com/564x/14/f3/1d/14f31de2e7e96e8eb514c898d74241fe.jpg", "https://i.pinimg.com/564x/98/8a/b7/988ab7dcde08b86f5a26925beba4f9db.jpg", 
+            "https://i.pinimg.com/564x/71/74/f6/7174f6dc7f9787eb046fdcffa4cbe46b.jpg", "https://i.pinimg.com/564x/99/ee/fd/99eefd6adecea6b9575a530fdd57cf86.jpg"]
 
 sapos = ["https://cdn.wallpapersafari.com/41/15/xZomb3.jpg", "http://2.bp.blogspot.com/-VirjBRtnyIU/TyfUR2dSi_I/AAAAAAAAB8E/8jDDSBmWs1E/s1600/Cute+Frog4.jpg",
          "https://shopzoki.com/wp-content/uploads/2019/09/IMG_5617.jpg", "https://shopzoki.com/wp-content/uploads/2019/09/DSC_1370.jpg", 
@@ -97,6 +106,24 @@ async def aulas(ctx):
         await ctx.reply(embed = embed_aulas1)
     else:
         await ctx.reply(embed = embed_aulas2)
+
+#shipping an alterna right to your door!
+@bot.command(help = "shipping an altena right away!!")
+async def alterna(ctx):
+    tracking = random.randint(29719301, 91739173)
+
+    emb = discord.Embed()
+    emb.title = "Thank you for your purchase!"
+    emb.description = '''An alterna was shipped to you and should arrive soon!
+                         You can use {} to track your package!'''.format(tracking)
+
+    channel = await ctx.message.author.create_dm()
+    dm = discord.Embed()
+    dm.title = "Your alterna has arrived! 🤤"
+    dm.set_image(url = random.choice(alternas))
+    
+    await ctx.reply(emb)
+    await channel.send(embed = dm)
 
 #gets reddit frog
 @bot.command(help = "sends top forggo on reddit !")
