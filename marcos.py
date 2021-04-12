@@ -107,8 +107,9 @@ async def aulas(ctx):
     else:
         await ctx.reply(embed = embed_aulas2)
 
-#embed fail
-async def alternamsg():
+#shipping an alterna right to your door!
+@bot.command(help = "shipping an altena right away!!")
+async def alterna(ctx):
     tracking = random.randint(29719301, 91739173)
 
     emb = discord.Embed()
@@ -116,18 +117,12 @@ async def alternamsg():
     emb.description = '''An alterna was shipped to you and should arrive soon!
                          You can use {} to track your package!'''.format(tracking)
 
-    return emb
-
-#shipping an alterna right to your door!
-@bot.command(help = "shipping an altena right away!!")
-async def alterna(ctx):
-
     channel = await ctx.message.author.create_dm()
     dm = discord.Embed()
     dm.title = "Your alterna has arrived! 🤤"
     dm.set_image(url = random.choice(alternas))
     
-    await ctx.reply(alternamsg)
+    await ctx.reply(embed = emb)
     await channel.send(embed = dm)
 
 #gets reddit frog
