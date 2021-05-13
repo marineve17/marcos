@@ -55,7 +55,7 @@ sexos = ["https://tenor.com/view/horny-jail-bonk-dog-hit-head-stop-being-horny-g
         "https://media.discordapp.net/attachments/635466696609759232/762026840457871390/caption.gif", "https://cdn.discordapp.com/attachments/813841826666250291/838803483745845298/unknown.png"]
 
 geral = bot.get_channel(int(os.environ["geral"]))
-guild = bot.get_guild(int(os.environ["server"]))
+#guild = bot.get_guild(int(os.environ["server"]))
 guild = bot.get_guild(759849368966004767)
 
 #acabou crlhhhh
