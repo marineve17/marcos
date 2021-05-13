@@ -310,7 +310,7 @@ async def weeb(ctx):
 
 #replies to marcos
 @bot.event
-async def marcos(msg: discord.Message):
+async def on_message(msg: discord.Message, ctx):
     await bot.process_commands(msg) 
     m: str = msg.content.lower()
 
@@ -323,16 +323,8 @@ async def marcos(msg: discord.Message):
         else:
             await msg.reply("https://cdn.discordapp.com/attachments/796509327997403156/823914978397388831/badady.mp4")
 
-@bot.event
-async def sixnine(msg: discord.Message):
-    await bot.process_commands(msg)
     if msg == '69':
         await msg.reply("nice")
-
-
-@bot.event
-async def tomalafabio(msg: discord.Message, ctx):
-    await bot.process_commands(msg)
 
     if msg.author == guild.get_member(335110897297129475):
         if ("matar" in str(msg)) and ("sapos" in str(msg)) or ("odeio" in str(msg)) and ("sapos" in str(msg)):
