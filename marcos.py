@@ -55,8 +55,7 @@ sexos = ["https://tenor.com/view/horny-jail-bonk-dog-hit-head-stop-being-horny-g
         "https://media.discordapp.net/attachments/635466696609759232/762026840457871390/caption.gif", "https://cdn.discordapp.com/attachments/813841826666250291/838803483745845298/unknown.png"]
 
 geral = bot.get_channel(int(os.environ["geral"]))
-#guild = bot.get_guild(int(os.environ["server"]))
-guild = bot.get_guild(759849368966004767)
+guild = bot.get_guild(int(os.environ["server"]))
 
 #acabou crlhhhh
 @bot.event
@@ -329,7 +328,7 @@ async def on_message(msg: discord.Message):
     if msg.content == '69':
         await msg.reply("nice")
 
-    if msg.author == guild.get_member(335110897297129475):
+    if msg.author == msg.guild.get_member(335110897297129475):
         if ("matar" in msg.content) and ("sapos" in m) or ("odeio" in m) and ("sapos" in m):
 
             channel = await msg.author.create_dm()
