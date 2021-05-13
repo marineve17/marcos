@@ -310,7 +310,7 @@ async def weeb(ctx):
 
 #replies to marcos
 @bot.event
-async def on_message(msg: discord.Message, ctx):
+async def on_message(msg: discord.Message):
     await bot.process_commands(msg) 
     m: str = msg.content.lower()
 
@@ -329,7 +329,7 @@ async def on_message(msg: discord.Message, ctx):
     if msg.author == guild.get_member(335110897297129475):
         if ("matar" in str(msg)) and ("sapos" in str(msg)) or ("odeio" in str(msg)) and ("sapos" in str(msg)):
 
-            channel = await ctx.message.author.create_dm()
+            channel = await msg.author.create_dm()
             dm = discord.Embed()
             dm.title = "Volta a dizer isso que tu vês >:C"
             dm.set_image(url = random.choice(sapos))
