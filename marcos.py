@@ -38,7 +38,8 @@ alternas = ["https://i.pinimg.com/564x/d2/ed/a1/d2eda1b3036aa94ded3381b3495b79d3
             "https://i.pinimg.com/564x/f4/6b/51/f46b517b5c31090fd1ac6c025fea3e63.jpg", "https://i.pinimg.com/564x/fc/59/ab/fc59ab3cc05dc204980a16d6e0b56750.jpg",
             "https://i.pinimg.com/564x/3e/9b/68/3e9b681c43b59c116fd8b4e20f114c5c.jpg", "https://i.pinimg.com/564x/5b/6f/9a/5b6f9ac06ca76ecbd507a9552cbe5cff.jpg",
             "https://i.pinimg.com/564x/14/f3/1d/14f31de2e7e96e8eb514c898d74241fe.jpg", "https://i.pinimg.com/564x/98/8a/b7/988ab7dcde08b86f5a26925beba4f9db.jpg", 
-            "https://i.pinimg.com/564x/71/74/f6/7174f6dc7f9787eb046fdcffa4cbe46b.jpg", "https://i.pinimg.com/564x/99/ee/fd/99eefd6adecea6b9575a530fdd57cf86.jpg"]
+            "https://i.pinimg.com/564x/71/74/f6/7174f6dc7f9787eb046fdcffa4cbe46b.jpg", "https://i.pinimg.com/564x/99/ee/fd/99eefd6adecea6b9575a530fdd57cf86.jpg",
+            "https://i.pinimg.com/originals/63/cc/1c/63cc1c23ab98d4f726efb75321c75b67.jpg, "]
 
 sapos = ["https://cdn.wallpapersafari.com/41/15/xZomb3.jpg", "http://2.bp.blogspot.com/-VirjBRtnyIU/TyfUR2dSi_I/AAAAAAAAB8E/8jDDSBmWs1E/s1600/Cute+Frog4.jpg",
          "https://shopzoki.com/wp-content/uploads/2019/09/IMG_5617.jpg", "https://shopzoki.com/wp-content/uploads/2019/09/DSC_1370.jpg", 
@@ -51,7 +52,30 @@ sapos = ["https://cdn.wallpapersafari.com/41/15/xZomb3.jpg", "http://2.bp.blogsp
          "https://tenor.com/view/frog-spinning-vinyl-animal-carnivorous-gif-17270183", "https://tenor.com/view/frog-gail-fail-let-me-have-it-gif-12024489"]
 
 sexos = ["https://tenor.com/view/horny-jail-bonk-dog-hit-head-stop-being-horny-gif-17298755", "https://media.discordapp.net/attachments/409313701888393218/715292714622517328/meme.gif",
-        "https://media.discordapp.net/attachments/635466696609759232/762026840457871390/caption.gif"]
+        "https://media.discordapp.net/attachments/635466696609759232/762026840457871390/caption.gif", "https://cdn.discordapp.com/attachments/813841826666250291/838803483745845298/unknown.png"]
+
+geral = bot.get_channel(os.environ["geral"])
+guild = bot.get_guild(os.environ["server"])
+
+#acabou crlhhhh
+@bot.event
+async def acabou():
+    if datetime.datetime.now().strftime("%Y") == 2021 and datetime.datetime.now().strftime("%m") == 6 and datetime.datetime.now().strftime("%d") == 4 and datetime.datetime.now().strftime("%H") == 5 and datetime.datetime.now().strftime("%M") == 30:
+        await geral.send("https://cdn.discordapp.com/attachments/759882556744663040/842457377478672394/caption.gif")
+
+    await asyncio.sleep(59)
+
+bot.loop.create_task(acabou())
+
+@bot.event
+async def testes():
+    if datetime.datetime.now().strftime("%Y") == 2021 and datetime.datetime.now().strftime("%m") == 6 and datetime.datetime.now().strftime("%d") == 22 and datetime.datetime.now().strftime("%H") == 3 and datetime.datetime.now().strftime("%M") == 00:
+        await geral.send("Acabaram os exames caralhooooooo")
+        await geral.send("https://tenor.com/view/a-mimir-gif-21449019")
+
+    await asyncio.sleep(59)
+
+bot.loop.create_task(testes())
 
 #changes discord presence
 @bot.event
@@ -286,7 +310,7 @@ async def weeb(ctx):
 
 #replies to marcos
 @bot.event
-async def on_message(msg: discord.Message):
+async def marcos(msg: discord.Message):
     await bot.process_commands(msg) 
     m: str = msg.content.lower()
 
@@ -298,6 +322,28 @@ async def on_message(msg: discord.Message):
             await msg.reply(emb)
         else:
             await msg.reply("https://cdn.discordapp.com/attachments/796509327997403156/823914978397388831/badady.mp4")
+
+@bot.event
+async def sixnine(msg: discord.Message):
+    await bot.process_commands(msg)
+    if msg == '69':
+        await msg.reply("nice")
+
+
+@bot.event
+async def tomalafabio(msg: discord.Message, ctx):
+    await bot.process_commands(msg)
+
+    if msg.author == guild.get_member(335110897297129475):
+        if ("matar" in str(msg)) and ("sapos" in str(msg)) or ("odeio" in str(msg)) and ("sapos" in str(msg)):
+
+            channel = await ctx.message.author.create_dm()
+            dm = discord.Embed()
+            dm.title = "Volta a dizer isso que tu vês >:C"
+            dm.set_image(url = random.choice(sapos))
+            
+            await channel.send(embed = dm)
+            await msg.reply("https://tenor.com/view/kermit-evil-slapping-smack-kermit-the-frog-gif-17875825")
 
 
 bot.run(TOKEN)
