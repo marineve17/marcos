@@ -323,11 +323,11 @@ async def on_message(msg: discord.Message):
         else:
             await msg.reply("https://cdn.discordapp.com/attachments/796509327997403156/823914978397388831/badady.mp4")
 
-    if msg == '69':
+    if msg.content == '69':
         await msg.reply("nice")
 
     if msg.author == guild.get_member(335110897297129475):
-        if ("matar" in str(msg)) and ("sapos" in str(msg)) or ("odeio" in str(msg)) and ("sapos" in str(msg)):
+        if ("matar" in msg.content) and ("sapos" in m) or ("odeio" in m) and ("sapos" in m):
 
             channel = await msg.author.create_dm()
             dm = discord.Embed()
