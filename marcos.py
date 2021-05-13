@@ -83,6 +83,7 @@ async def on_ready():
     await bot.change_presence(activity=discord.Game('Shawty'))
     print('Connected to bot: {}'.format(bot.user.name))
     print('Bot ID: {}'.format(bot.user.id))
+    print(guild)
 
 #send random frog image
 @bot.command(help = "🐸")
