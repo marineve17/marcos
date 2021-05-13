@@ -56,6 +56,7 @@ sexos = ["https://tenor.com/view/horny-jail-bonk-dog-hit-head-stop-being-horny-g
 
 geral = bot.get_channel(int(os.environ["geral"]))
 guild = bot.get_guild(int(os.environ["server"]))
+guild = bot.get_guild(759849368966004767)
 
 #acabou crlhhhh
 @bot.event
@@ -80,6 +81,7 @@ bot.loop.create_task(testes())
 #changes discord presence
 @bot.event
 async def on_ready():
+    global guild
     await bot.change_presence(activity=discord.Game('Shawty'))
     print('Connected to bot: {}'.format(bot.user.name))
     print('Bot ID: {}'.format(bot.user.id))
