@@ -39,7 +39,11 @@ alternas = ["https://i.pinimg.com/564x/d2/ed/a1/d2eda1b3036aa94ded3381b3495b79d3
             "https://i.pinimg.com/564x/3e/9b/68/3e9b681c43b59c116fd8b4e20f114c5c.jpg", "https://i.pinimg.com/564x/5b/6f/9a/5b6f9ac06ca76ecbd507a9552cbe5cff.jpg",
             "https://i.pinimg.com/564x/14/f3/1d/14f31de2e7e96e8eb514c898d74241fe.jpg", "https://i.pinimg.com/564x/98/8a/b7/988ab7dcde08b86f5a26925beba4f9db.jpg", 
             "https://i.pinimg.com/564x/71/74/f6/7174f6dc7f9787eb046fdcffa4cbe46b.jpg", "https://i.pinimg.com/564x/99/ee/fd/99eefd6adecea6b9575a530fdd57cf86.jpg",
-            "https://i.pinimg.com/originals/63/cc/1c/63cc1c23ab98d4f726efb75321c75b67.jpg, "]
+            "https://i.pinimg.com/originals/63/cc/1c/63cc1c23ab98d4f726efb75321c75b67.jpg", "https://cdn.discordapp.com/attachments/813841826666250291/860170891266490418/63cc1c23ab98d4f726efb75321c75b67.jpg",
+            "https://cdn.discordapp.com/attachments/813841826666250291/860171325950787614/unknown.png", "https://cdn.discordapp.com/attachments/813841826666250291/860171384323833896/unknown.png",
+            "https://cdn.discordapp.com/attachments/813841826666250291/860171540115750932/unknown.png", "https://cdn.discordapp.com/attachments/813841826666250291/860171600674291752/unknown.png", 
+            "https://cdn.discordapp.com/attachments/813841826666250291/860171660232753182/unknown.png", "https://cdn.discordapp.com/attachments/813841826666250291/860171711533809694/unknown.png",
+            "https://cdn.discordapp.com/attachments/813841826666250291/860171763736248340/unknown.png"]
 
 sapos = ["https://cdn.wallpapersafari.com/41/15/xZomb3.jpg", "http://2.bp.blogspot.com/-VirjBRtnyIU/TyfUR2dSi_I/AAAAAAAAB8E/8jDDSBmWs1E/s1600/Cute+Frog4.jpg",
          "https://shopzoki.com/wp-content/uploads/2019/09/IMG_5617.jpg", "https://shopzoki.com/wp-content/uploads/2019/09/DSC_1370.jpg", 
@@ -57,25 +61,17 @@ sexos = ["https://tenor.com/view/horny-jail-bonk-dog-hit-head-stop-being-horny-g
 geral = bot.get_channel(int(os.environ["geral"]))
 guild = bot.get_guild(int(os.environ["server"]))
 
-#acabou crlhhhh
+#ya isto não correu bem :/
 @bot.event
 async def acabou():
-    if datetime.datetime.now().strftime("%Y") == 2021 and datetime.datetime.now().strftime("%m") == 6 and datetime.datetime.now().strftime("%d") == 4 and datetime.datetime.now().strftime("%H") == 5 and datetime.datetime.now().strftime("%M") == 30:
-        await geral.send("https://cdn.discordapp.com/attachments/759882556744663040/842457377478672394/caption.gif")
+    while(True):
+        await bot.wait_until_ready()
+        if datetime.datetime.now().strftime("%Y") == 2021 and datetime.datetime.now().strftime("%m") == 7 and datetime.datetime.now().strftime("%d") == 9 and datetime.datetime.now().strftime("%H") == 5 and datetime.datetime.now().strftime("%M") == 30:
+            await geral.send("https://cdn.discordapp.com/attachments/844974741130313779/860170459441004564/caption.gif")
 
-    await asyncio.sleep(59)
+        await asyncio.sleep(59)
 
 bot.loop.create_task(acabou())
-
-@bot.event
-async def testes():
-    if datetime.datetime.now().strftime("%Y") == 2021 and datetime.datetime.now().strftime("%m") == 6 and datetime.datetime.now().strftime("%d") == 22 and datetime.datetime.now().strftime("%H") == 3 and datetime.datetime.now().strftime("%M") == 00:
-        await geral.send("Acabaram os exames caralhooooooo")
-        await geral.send("https://tenor.com/view/a-mimir-gif-21449019")
-
-    await asyncio.sleep(59)
-
-bot.loop.create_task(testes())
 
 #changes discord presence
 @bot.event
