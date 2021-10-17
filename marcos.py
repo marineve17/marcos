@@ -112,8 +112,8 @@ async def aulas(ctx):
     [MPCP](https://videoconf-colibri.zoom.us/j/81799571785?pwd=T0U2NEdCTkd6ODhFMmVoTTJ3bHA2dz09) \n(qui 10:30-12:30)
     [MEST](https://videoconf-colibri.zoom.us/j/83335195718?pwd=QW1mTisxZkdFOVM4Y1lHSDRoUU84UT09) \n(qua 11:00-13:00)'''
 
-    if (guild.get_member(809036224957513748).status == discord.Status.offline):  #replacing botinha's shifts
-        await ctx.reply(embed = embed_aulas1)
+    #if (guild.get_member(809036224957513748).status == discord.Status.offline):  #replacing botinha's shifts
+    #    await ctx.reply(embed = embed_aulas1)
 
 #shipping an alterna right to your door!
 @bot.command(help = "shipping an altena right away!!")
