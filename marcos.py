@@ -100,34 +100,20 @@ async def sexo(ctx):
     await ctx.reply(sexo)
 
 #replies with class link
-@bot.command(help = "link po lima")
+@bot.command(help = "links da primeira semana")
 async def aulas(ctx):
     guild = bot.get_guild(759849368966004767)
     embed_aulas1 = discord.Embed()
-    embed_aulas1.title = "Aulas MIEIC"
-    embed_aulas1.description = '''\nCMAT \n([seg](https://videoconf-colibri.zoom.us/j/87558364347?pwd=MStyUVpPSlEycmZvbWcrNGF0NnJxZz09) 9:00-10:00 | [qua](https://videoconf-colibri.zoom.us/j/86166483975?pwd=VlRZelRvbjJzMmtXc1dsMDlnNTh0QT09) 10:00-11:00)
-    [FIS1](https://videoconf-colibri.zoom.us/j/82303035851?pwd=RWFiR3M4WExuU2tubitsaGRzZjJvUT09)      \n(seg 10:00-11:00 | qua 9:00-10:00)
+    embed_aulas1.title = "Aulas L.EIC"
+    embed_aulas1.description = '''\nBDAD PAR \n([seg](https://videoconf-colibri.zoom.us/j/87348858347) 15:00-16:00 | [qui](https://videoconf-colibri.zoom.us/j/81363366128) 19:00-20:00)
+    BDAD IMPAR \n([seg](https://videoconf-colibri.zoom.us/j/83134112659) 16:30 - 17:30 |[qui](https://videoconf-colibri.zoom.us/j/83482649273) 15:00-16:00)
+    [FISI](https://videoconf-colibri.zoom.us/j/82303035851?pwd=RWFiR3M4WExuU2tubitsaGRzZjJvUT09)      \n(seg 10:00-11:00 | qua 9:00-10:00)
     [PROG](https://teams.microsoft.com/l/channel/19%3a0a486ea7628247de956d27755601308e%40thread.tacv2/Geral?groupId=b05f83cd-100e-4c31-a797-146513c69887&tenantId=b7821bc8-67cc-447b-b579-82f7854174fc) \n(seg 11:00-12:30 | qui 9:00-10:30)
     [MPCP](https://videoconf-colibri.zoom.us/j/81799571785?pwd=T0U2NEdCTkd6ODhFMmVoTTJ3bHA2dz09) \n(qui 10:30-12:30)
-    [MEST](https://videoconf-colibri.zoom.us/j/83335195718?pwd=QW1mTisxZkdFOVM4Y1lHSDRoUU84UT09) \n(qua 11:00-13:00)
-
-    -- TURMA 3 --   
-    [FISI](https://us02web.zoom.us/j/5187730519?pwd=VUpVUGFjVVZXeE1PakFKSHBIa2IwZz09)
-    [CMAT](https://videoconf-colibri.zoom.us/j/89216289853)
-    [MPCP](https://videoconf-colibri.zoom.us/j/84523046353?pwd=bTNVemVqQk1YQ0lTcDVTMEtiUDNKUT09)
-    [MEST](https://videoconf-colibri.zoom.us/j/85894404142?pwd=N09zK29OaVFoWVZEaVRPMXZuYnQwZz09)'''
-
-    embed_aulas2 = discord.Embed()
-    embed_aulas2.title = "Aulas Turma 3"
-    embed_aulas2.description = '''[FISI](https://us02web.zoom.us/j/5187730519?pwd=VUpVUGFjVVZXeE1PakFKSHBIa2IwZz09)
-    [CMAT](https://videoconf-colibri.zoom.us/j/89216289853)
-    [MPCP](https://videoconf-colibri.zoom.us/j/84523046353?pwd=bTNVemVqQk1YQ0lTcDVTMEtiUDNKUT09)
-    [MEST](https://videoconf-colibri.zoom.us/j/85894404142?pwd=N09zK29OaVFoWVZEaVRPMXZuYnQwZz09)'''
+    [MEST](https://videoconf-colibri.zoom.us/j/83335195718?pwd=QW1mTisxZkdFOVM4Y1lHSDRoUU84UT09) \n(qua 11:00-13:00)'''
 
     if (guild.get_member(809036224957513748).status == discord.Status.offline):  #replacing botinha's shifts
         await ctx.reply(embed = embed_aulas1)
-    else:
-        await ctx.reply(embed = embed_aulas2)
 
 #shipping an alterna right to your door!
 @bot.command(help = "shipping an altena right away!!")
