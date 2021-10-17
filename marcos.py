@@ -106,7 +106,7 @@ async def aulas(ctx):
     embed_aulas1.title = "Aulas L.EIC"
     embed_aulas1.description = '''\nBDAD IMPAR \n([seg](https://videoconf-colibri.zoom.us/j/87348858347) 15:00-16:00 | [qui](https://videoconf-colibri.zoom.us/j/81363366128) 19:00-20:00)
     BDAD PAR \n([seg](https://videoconf-colibri.zoom.us/j/83134112659) 16:30-17:30 | [qui](https://videoconf-colibri.zoom.us/j/83482649273) 15:00-16:00)
-    [AEDA](https://moodle.up.pt/course/view.php?id=4095)
+    [AEDA](https://videoconf-colibri.zoom.us/j/86106401089?pwd=TElEQnJsSWxobEdsK2VqZ0JQWnhXUT09)
     FISI2 \n([14:00-15:30](https://us02web.zoom.us/j/5187730519?pwd=VUpVUGFjVVZXeE1PakFKSHBIa2IwZz09) | [16:00-17:30](https://videoconf-colibri.zoom.us/j/87471710064?pwd=WGQ5N2xDdFl5ckVLOHVXUThka1VXZz09))
     [LDTS](https://videoconf-colibri.zoom.us/j/83509609332?pwd=dzBKczF2akIySVlZcHZValJIZERLZz09)
     [TCOM](https://teams.microsoft.com/l/team/19%3aD1SnJs22lq4oSAVpoLsnpEtmPx2raH6yYh02FExCSVY1%40thread.tacv2/conversations?groupId=04da93b5-66cc-42ca-9123-69099c8e2fd8&tenantId=b7821bc8-67cc-447b-b579-82f7854174fc)'''
