@@ -160,6 +160,42 @@ async def aulas(ctx):
     await ctx.reply(embed=embed)
 
 
+# replies with online classes link -- GLORIOUS MIEEC EDITION
+@bot.command(help="MIEEC AULAS ONLINE")
+async def mieec(ctx):
+    embed = discord.Embed(title="Aulas MIEEC", description="links das aulas online - 2º ano", color=0x00A0A0)
+    embed.add_field(
+        name="Turmas 1 -> 6",
+        value="",
+        inline=False,
+    )
+    embed.add_field(
+        name="Terça",
+        value=f"> 10:00 - 11:30 : [🧲 E](https://videoconf-colibri.zoom.us/j/81822310432?pwd=K0psT1dzcHcyV0FqSHVGcjVxRzlXQT09) pass: 191021\n> 11:30 - 12:30 : [🤔 PE](https://videoconf-colibri.zoom.us/j/96233141522?pwd=alVFQlNmSmdsZXdvb2VIbHRmMWZ4dz09) pass: 629153\n> 14:30 - 15:30 : [📶 SS](https://videoconf-colibri.zoom.us/j/87973051114)\n> 15:30 - 17:30 : [🔢 MN](https://videoconf-colibri.zoom.us/j/84874948575?pwd=UzF1djNzVzltUFl0TDh5dmZBNDd2dz09)\n> 17:30 - 18:30 : [🖥️ AC](https://videoconf-colibri.zoom.us/j/83872875133?pwd=QmtUU2dwVGx4Mk5zQWh1N0JNSmoxdz09)\n",
+        inline=True,
+    )
+    embed.add_field(
+        name="Sexta",
+        value=f"> 09:30 - 11:00 : [🧲 E](https://videoconf-colibri.zoom.us/j/81822310432?pwd=K0psT1dzcHcyV0FqSHVGcjVxRzlXQT09) pass: 191021\n> 11:00 - 12:00 : [📶 SS](https://videoconf-colibri.zoom.us/j/87973051114)\n> 15:00 - 16:00 : [🤔 PE](https://videoconf-colibri.zoom.us/j/96233141522?pwd=alVFQlNmSmdsZXdvb2VIbHRmMWZ4dz09) pass: 629153\n> 16:00 - 17:00 : [🖥️ AC](https://videoconf-colibri.zoom.us/j/83872875133?pwd=QmtUU2dwVGx4Mk5zQWh1N0JNSmoxdz09)\n",
+        inline=True,
+    )
+    embed.add_field(
+        name="Turmas 7 -> 14",
+        value="",
+        inline=False,
+    )
+    embed.add_field(
+        name="Segunda",
+        value=f"> 09:30 - 10:30 : [📶 SS](https://videoconf-colibri.zoom.us/j/85245292807)\n> 10:30 - 12:00 : [🧲 E](https://videoconf-colibri.zoom.us/j/81415832766?pwd=U1lydWR5cENLd042aDI1ZVU5NlBPUT09) pass: 706259\n> 12:00 - 13:00 : [🤔 PE](https://videoconf-colibri.zoom.us/j/96233141522?pwd=alVFQlNmSmdsZXdvb2VIbHRmMWZ4dz09) pass: 629153\n> 14:00 - 15:00 : [🖥️ AC](https://videoconf-colibri.zoom.us/j/89756578375?pwd=SDd1SDdYaEhmRGNTRGMwSnpjeWlFdz09)\n",
+        inline=True,
+    )
+    embed.add_field(
+        name="Quarta",
+        value=f"> 09:00 - 10:00 : [📶 SS](https://videoconf-colibri.zoom.us/j/85245292807)\n> 10:00 - 11:00 : [🖥️ AC](https://videoconf-colibri.zoom.us/j/89756578375?pwd=SDd1SDdYaEhmRGNTRGMwSnpjeWlFdz09)\n> 11:00 - 12:30 : [🔢 MN](https://videoconf-colibri.zoom.us/j/87161718746?pwd=eUhJSE1RbmZYaGJ5a01LYmNxWFdHQT09)\n> 14:00 - 15:30 : [🧲 E](https://videoconf-colibri.zoom.us/j/85243961654?pwd=anNiUWJ2MUlVQUJaSjBYekhzN2ZBQT09) pass: 219574\n> 15:30 - 16:30 : [🤔 PE](https://videoconf-colibri.zoom.us/j/96233141522?pwd=alVFQlNmSmdsZXdvb2VIbHRmMWZ4dz09) pass: 629153\n",
+        inline=True,
+    )
+    await ctx.reply(embed=embed)
+
 # embed_aulas1 = discord.Embed()
 # embed_aulas1.title = "Aulas L.EIC"
 # embed_aulas1.description = '''\nBDAD IMPAR \n([seg](https://videoconf-colibri.zoom.us/j/87348858347) 15:00-16:00 | [qui](https://videoconf-colibri.zoom.us/j/81363366128) 19:00-20:00)
