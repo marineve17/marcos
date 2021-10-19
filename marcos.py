@@ -161,12 +161,12 @@ async def aulas(ctx):
 
 
 # replies with online classes link -- GLORIOUS MIEEC EDITION
-@bot.command(help="MIEEC AULAS ONLINE")
+@bot.command(help="links das aulas online mieec - 2º ano")
 async def mieec(ctx):
     embed = discord.Embed(title="Aulas MIEEC", description="links das aulas online - 2º ano", color=0x00A0A0)
     embed.add_field(
-        name="Turmas 1 -> 6",
-        value="",
+        name="**Turmas 1 -> 6**",
+        value="\n",
         inline=False,
     )
     embed.add_field(
@@ -180,8 +180,8 @@ async def mieec(ctx):
         inline=True,
     )
     embed.add_field(
-        name="Turmas 7 -> 14",
-        value="",
+        name="**Turmas 7 -> 14**",
+        value="\n",
         inline=False,
     )
     embed.add_field(
