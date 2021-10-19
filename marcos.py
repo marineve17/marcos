@@ -166,7 +166,7 @@ async def mieec(ctx):
     embed = discord.Embed(title="Aulas MIEEC", description="links das aulas online - 2º ano", color=0x00A0A0)
     embed.add_field(
         name="**Turmas 1 -> 6**",
-        value="\n",
+        value=" ",
         inline=False,
     )
     embed.add_field(
@@ -181,7 +181,7 @@ async def mieec(ctx):
     )
     embed.add_field(
         name="**Turmas 7 -> 14**",
-        value="\n",
+        value=" ",
         inline=False,
     )
     embed.add_field(
