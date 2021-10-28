@@ -199,15 +199,9 @@ async def mieec(ctx):
         value=f"> 09:30 - 11:00 : [🧲 E](https://videoconf-colibri.zoom.us/j/81822310432?pwd=K0psT1dzcHcyV0FqSHVGcjVxRzlXQT09) pass: 191021\n> 11:00 - 12:00 : [📶 SS](https://videoconf-colibri.zoom.us/j/87973051114)\n> 15:00 - 16:00 : [🤔 PE](https://videoconf-colibri.zoom.us/j/96233141522?pwd=alVFQlNmSmdsZXdvb2VIbHRmMWZ4dz09) pass: 629153\n> 16:00 - 17:00 : [🖥️ AC](https://videoconf-colibri.zoom.us/j/83872875133?pwd=QmtUU2dwVGx4Mk5zQWh1N0JNSmoxdz09)\n",
         inline=True,
     )
-<<<<<<< HEAD
-    embed.add (
-        name="**Turmas 7 -> 14**",
-        value=" ",
-=======
     embed.add_field(
         name=f"\n\nTurmas 7 -> 14",
         value=f"\u200b", #unicode for blank character
->>>>>>> 1cd3c06871520568f6f3e61832c352647732d065
         inline=False,
     )
     embed.add_field(
