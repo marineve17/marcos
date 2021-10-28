@@ -151,7 +151,7 @@ async def aulas(ctx):
         value=" ",
         inline=False,
     )
-    embed.add.field(
+    embed.add_field(
         name=f"**Segunda**",
         value=f"> 14:00 - 15:00 : [💻 AED](https://videoconf-colibri.zoom.us/j/86106401089?pwd=TElEQnJsSWxobEdsK2VqZ0JQWnhXUT09)\n> 15:00 - 16:00 : [💾 BD](https://videoconf-colibri.zoom.us/j/83134112659)\n> 16:00 - 17:30 : [🧲 FII](https://videoconf-colibri.zoom.us/j/87471710064?pwd=WGQ5N2xDdFl5ckVLOHVXUThka1VXZz09)",
         inline=False,
