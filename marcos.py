@@ -148,7 +148,7 @@ async def aulas(ctx):
     embed = discord.Embed()
     embed.add_field(
         name =f"**Turmas 1-8**",
-        value=" ",
+        value="\u200b",
         inline=False,
     )
     embed.add_field(
@@ -163,7 +163,7 @@ async def aulas(ctx):
     )
     embed.add_field(
         name=f"**Turmas 9-16**",
-        value=" ",
+        value="\u200b",
         inline=False,
     )
     embed.add_field(
