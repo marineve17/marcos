@@ -191,7 +191,7 @@ async def mieec(ctx):
     )
     embed.add_field(
         name=f"Quarta",
-        value=f"> 09:00 - 10:00 : [📶 SS](https://videoconf-colibri.zoom.us/j/85245292807)\n> 10:00 - 11:00 : [🖥️ AC](https://videoconf-colibri.zoom.us/j/89756578375?pwd=SDd1SDdYaEhmRGNTRGMwSnpjeWlFdz09)\n> 11:00 - 12:30 : [🔢 MN](https://videoconf-colibri.zoom.us/j/87161718746?pwd=eUhJSE1RbmZYaGJ5a01LYmNxWFdHQT09)\n> 14:00 - 15:30 : [🧲 E](https://videoconf-colibri.zoom.us/j/85243961654?pwd=anNiUWJ2MUlVQUJaSjBYekhzN2ZBQT09) pass: 219574\n> 15:30 - 16:30 : [🤔 PE](https://videoconf-colibri.zoom.us/j/96233141522?pwd=alVFQlNmSmdsZXdvb2VIbHRmMWZ4dz09) pass: 629153\n",
+        value=f"> 08:00 - 09:00 : [📶 SS](https://videoconf-colibri.zoom.us/j/85245292807)\n> 09:00 - 10:00 : [🖥️ AC](https://videoconf-colibri.zoom.us/j/89756578375?pwd=SDd1SDdYaEhmRGNTRGMwSnpjeWlFdz09)\n> 10:00 - 11:30 : [🔢 MN](https://videoconf-colibri.zoom.us/j/84974944628?pwd=aGd6WkVSK3Jzb2x4VVErK1hWYXMxZz09)\n> 14:00 - 15:30 : [🧲 E](https://videoconf-colibri.zoom.us/j/85243961654?pwd=anNiUWJ2MUlVQUJaSjBYekhzN2ZBQT09) pass: 219574\n> 15:30 - 16:30 : [🤔 PE](https://videoconf-colibri.zoom.us/j/96233141522?pwd=alVFQlNmSmdsZXdvb2VIbHRmMWZ4dz09) pass: 629153\n",
         inline=True,
     )
     await ctx.reply(embed=embed)
