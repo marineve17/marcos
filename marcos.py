@@ -148,9 +148,12 @@ async def shawty(ctx):
 # send sexo gif
 @bot.command(help="bonk, go to horny jail")
 async def sexo(ctx):
-    sexo = random.choice(sexos)
-    await ctx.reply(sexo)
+    await ctx.reply(random.choice(sexos))
 
+
+@bot.command(help="amanda a mimir")
+async def amimir(ctx):
+    await ctx.reply(random.choice(amimir))
 
 # replies with class link
 @bot.command(help="links aulas :')")
