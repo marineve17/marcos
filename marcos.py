@@ -90,7 +90,7 @@ sexos = [
     "https://cdn.discordapp.com/attachments/813841826666250291/838803483745845298/unknown.png",
 ]
 
-amimir = [
+amimires = [
     "https://tenor.com/view/a-mimir-gif-21449019", 
     "https://tenor.com/view/yamato-rinko-a-mimir-gif-19747650"
     ]
@@ -102,25 +102,6 @@ genshin = [
 
 geral = bot.get_channel(int(os.environ["geral"]))
 guild = bot.get_guild(int(os.environ["server"]))
-
-# ya isto não correu bem :/
-@bot.event
-async def acabou():
-    while True:
-        await bot.wait_until_ready()
-        if (
-            datetime.datetime.now().strftime("%Y") == 2021
-            and datetime.datetime.now().strftime("%m") == 7
-            and datetime.datetime.now().strftime("%d") == 9
-            and datetime.datetime.now().strftime("%H") == 5
-            and datetime.datetime.now().strftime("%M") == 30
-        ):
-            await geral.send("https://cdn.discordapp.com/attachments/844974741130313779/860170459441004564/caption.gif")
-
-        await asyncio.sleep(59)
-
-
-bot.loop.create_task(acabou())
 
 # changes discord presence
 @bot.event
@@ -153,7 +134,7 @@ async def sexo(ctx):
 
 @bot.command(help="amanda a mimir")
 async def amimir(ctx):
-    await ctx.reply(random.choice(amimir))
+    await ctx.reply(random.choice(amimires))
 
 # replies with class link
 @bot.command(help="links aulas :')")
