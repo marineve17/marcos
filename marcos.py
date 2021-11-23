@@ -90,6 +90,16 @@ sexos = [
     "https://cdn.discordapp.com/attachments/813841826666250291/838803483745845298/unknown.png",
 ]
 
+amimir = [
+    "https://tenor.com/view/a-mimir-gif-21449019", 
+    "https://tenor.com/view/yamato-rinko-a-mimir-gif-19747650"
+    ]
+
+genshin = [
+    "https://tenor.com/view/chillware-okaycool-genshin-impact-klee-gif-21728125", 
+    "https://tenor.com/view/genshin-impact-genshin-dance-genshin-genshin-memes-genshin-impact-zhongli-gif-23378996"
+    ]
+
 geral = bot.get_channel(int(os.environ["geral"]))
 guild = bot.get_guild(int(os.environ["server"]))
 
@@ -143,7 +153,7 @@ async def sexo(ctx):
 
 
 # replies with class link
-@bot.command(help="links da primeira semana")
+@bot.command(help="links aulas :')")
 async def aulas(ctx):
     embed = discord.Embed()
     embed.add_field(
@@ -153,7 +163,7 @@ async def aulas(ctx):
     )
     embed.add_field(
         name=f"**Segunda**",
-        value=f"> 14:00 - 15:00 : [💻 AED](https://videoconf-colibri.zoom.us/j/86106401089?pwd=TElEQnJsSWxobEdsK2VqZ0JQWnhXUT09)\n> 15:00 - 16:00 : [💾 BD](https://videoconf-colibri.zoom.us/j/83134112659)\n> 16:00 - 17:30 : [🧲 FII](https://videoconf-colibri.zoom.us/j/87471710064?pwd=WGQ5N2xDdFl5ckVLOHVXUThka1VXZz09)",
+        value=f"> 14:00 - 15:00 : [💻 AED](https://videoconf-colibri.zoom.us/j/86106401089?pwd=TElEQnJsSWxobEdsK2VqZ0JQWnhXUT09)\n> 15:00 - 16:00 : [💾 BD](https://videoconf-colibri.zoom.us/j/87348858347)\n> 16:00 - 17:30 : [🧲 FII](https://videoconf-colibri.zoom.us/j/87318387270?pwd=VTMwSWpBaTQwcHIxM1hRM3JKVmlEZz09)",
         inline=False,
     )
     embed.add_field(
