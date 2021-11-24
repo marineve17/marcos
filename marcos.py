@@ -421,7 +421,7 @@ async def on_message(msg: discord.Message):
         await msg.reply("blaze it")
 
     if msg.author == msg.guild.get_member(335110897297129475):
-        if ("matar" in msg.content) and ("sapos" in m) or ("odeio" in m) and ("sapos" in m):
+        if ("matar" in m) and ("sapos" in m) or ("odeio" in m) and ("sapos" in m):
 
             channel = await msg.author.create_dm()
             dm = discord.Embed()
