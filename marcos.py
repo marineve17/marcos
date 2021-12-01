@@ -147,12 +147,12 @@ async def aulas(ctx):
     )
     embed.add_field(
         name=f"**Segunda**",
-        value=f"> 14:00 - 15:00 : [💻 AED](https://videoconf-colibri.zoom.us/j/86106401089?pwd=TElEQnJsSWxobEdsK2VqZ0JQWnhXUT09)\n> 15:00 - 16:00 : [💾 BD](https://videoconf-colibri.zoom.us/j/87348858347)\n> 16:00 - 17:30 : [🧲 FII](https://videoconf-colibri.zoom.us/j/87318387270?pwd=VTMwSWpBaTQwcHIxM1hRM3JKVmlEZz09)",
+        value=f"> 14:00 - 15:00 : [💻 AED](https://videoconf-colibri.zoom.us/j/83848376408?pwd=clZ2ZkxTUU5KS2RMR1VjbFlvNFNGZz09)\n> 15:00 - 16:00 : [💾 BD](https://videoconf-colibri.zoom.us/j/87348858347)\n> 16:00 - 17:30 : [🧲 FII](https://videoconf-colibri.zoom.us/j/87318387270?pwd=VTMwSWpBaTQwcHIxM1hRM3JKVmlEZz09)",
         inline=False,
     )
     embed.add_field(
         name=f"**Quinta**",
-        value=f"> 14:00 - 16:00 : [🧑‍🔬 LDTS](https://videoconf-colibri.zoom.us/j/83509609332?pwd=dzBKczF2akIySVlZcHZValJIZERLZz09)\n > 16:00 - 18:00 : [🤔 TC](https://teams.microsoft.com/l/team/19%3aD1SnJs22lq4oSAVpoLsnpEtmPx2raH6yYh02FExCSVY1%40thread.tacv2/conversations?groupId=04da93b5-66cc-42ca-9123-69099c8e2fd8&tenantId=b7821bc8-67cc-447b-b579-82f7854174fc)\n> 18:00 - 19:00 : [💻 AED](https://videoconf-colibri.zoom.us/j/86106401089?pwd=TElEQnJsSWxobEdsK2VqZ0JQWnhXUT09)\n> 19:00 - 20:00 [💾 BD](https://videoconf-colibri.zoom.us/j/81363366128)",
+        value=f"> 14:00 - 16:00 : [🧑‍🔬 LDTS](https://videoconf-colibri.zoom.us/j/83509609332?pwd=dzBKczF2akIySVlZcHZValJIZERLZz09)\n > 16:00 - 18:00 : [🤔 TC](https://teams.microsoft.com/l/team/19%3aD1SnJs22lq4oSAVpoLsnpEtmPx2raH6yYh02FExCSVY1%40thread.tacv2/conversations?groupId=04da93b5-66cc-42ca-9123-69099c8e2fd8&tenantId=b7821bc8-67cc-447b-b579-82f7854174fc)\n> 18:00 - 19:00 : [💻 AED](https://videoconf-colibri.zoom.us/j/83848376408?pwd=clZ2ZkxTUU5KS2RMR1VjbFlvNFNGZz09)\n> 19:00 - 20:00 [💾 BD](https://videoconf-colibri.zoom.us/j/81363366128)",
         inline=False,
     )
     embed.add_field(
@@ -162,12 +162,12 @@ async def aulas(ctx):
     )
     embed.add_field(
         name=f"**Segunda**",
-        value=f"> 14:00 - 15:30 : [🧲 FII](https://us02web.zoom.us/j/5187730519?pwd=VUpVUGFjVVZXeE1PakFKSHBIa2IwZz09)\n> 15:30 - 16:30 : [💻 AED](https://videoconf-colibri.zoom.us/j/86106401089?pwd=TElEQnJsSWxobEdsK2VqZ0JQWnhXUT09)\n> 16:30 - 17:30 : [💾 BD](https://videoconf-colibri.zoom.us/j/83134112659)",
+        value=f"> 14:00 - 15:30 : [🧲 FII](https://us02web.zoom.us/j/5187730519?pwd=VUpVUGFjVVZXeE1PakFKSHBIa2IwZz09)\n> 15:30 - 16:30 : [💻 AED](https://videoconf-colibri.zoom.us/j/83848376408?pwd=clZ2ZkxTUU5KS2RMR1VjbFlvNFNGZz09)\n> 16:30 - 17:30 : [💾 BD](https://videoconf-colibri.zoom.us/j/83134112659)",
         inline=False,
     )
     embed.add_field(
         name=f"**Quinta**",
-        value=f"> 14:00 - 15:00 : [💻 AED](https://videoconf-colibri.zoom.us/j/86106401089?pwd=TElEQnJsSWxobEdsK2VqZ0JQWnhXUT09)\n> 15:00 - 16:00 : [💾 BD](https://videoconf-colibri.zoom.us/j/83482649273)\n> 16:00 - 18:00 : [🤔 TC](https://teams.microsoft.com/l/team/19%3aD1SnJs22lq4oSAVpoLsnpEtmPx2raH6yYh02FExCSVY1%40thread.tacv2/conversations?groupId=04da93b5-66cc-42ca-9123-69099c8e2fd8&tenantId=b7821bc8-67cc-447b-b579-82f7854174fc) \n > 18:00 - 20:00 : [🧑‍🔬 LDTS](https://videoconf-colibri.zoom.us/j/83509609332?pwd=dzBKczF2akIySVlZcHZValJIZERLZz09)",
+        value=f"> 14:00 - 15:00 : [💻 AED](https://videoconf-colibri.zoom.us/j/83848376408?pwd=clZ2ZkxTUU5KS2RMR1VjbFlvNFNGZz09)\n> 15:00 - 16:00 : [💾 BD](https://videoconf-colibri.zoom.us/j/83482649273)\n> 16:00 - 18:00 : [🤔 TC](https://teams.microsoft.com/l/team/19%3aD1SnJs22lq4oSAVpoLsnpEtmPx2raH6yYh02FExCSVY1%40thread.tacv2/conversations?groupId=04da93b5-66cc-42ca-9123-69099c8e2fd8&tenantId=b7821bc8-67cc-447b-b579-82f7854174fc) \n > 18:00 - 20:00 : [🧑‍🔬 LDTS](https://videoconf-colibri.zoom.us/j/83509609332?pwd=dzBKczF2akIySVlZcHZValJIZERLZz09)",
         inline=False,
     )
     embed.color = 0x00A044
